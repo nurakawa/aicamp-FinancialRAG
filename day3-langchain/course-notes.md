@@ -21,10 +21,21 @@
     - Agent toolkits: agents armed with specific tools for a specific application  
 
 
-### Memory
-  ![alt text](images/memory-types.png)
+### Memory  
 
-  ![alt text](images/additional-memory-types.png)
+LangChain Memory types  
+- ConversationBufferMemory: allows for storing of messages, and then extracts the messages in a variable  
+- ConversationBufferWindowMemory: keeps a list of interactions over time. It may only use the last `k` interactions.  
+- ConversationTokenBufferMemory: keeps a list of interactions up to some `token_length` over time.  
+- ConversationSummaryMemory: creates a summary of the conversation over time.  
+
+Other Memory Types  
+- Vector Data Memory: stores text in a vector database and retrieves the most relevant blocks of text  
+- Entity Memories: using an LLM, it remembers details about specific entities  
+
+
+- It is possible to use multiple memory types at once  
+- Conversations can be stored in a SQL database  
 
 ### Chains
 
@@ -33,8 +44,6 @@
   - SimpleSequentialChain: single input / output
   - SequentialChain: multiple inputs / outputs
 - Router Chain: Route an input to a subchain depending on the input content.
-
-![alt text](images/router-chain.png)
 
 ### Question and Answer 
 
@@ -54,6 +63,9 @@
   - Cons: LLMs have context length, and for large documents or many documents this will not work, as it will result in a prompt larger than the context length  
 
 
-- __Other Methods__:  
+- __Other Methods__:   
+  - Map_reduce: first applies an LLM chain to each document individually (the Map step), treating the chain output as a new document. It then passes all the new documents to a separate combine documents chain to get a single output (the Reduce step).      
+  - Refine: constructs a response by looping over the input documents and iteratively updating its answer.    
+  - Map_rerank:  map reduce with reranking  
 
-![alt text](images/question-answer-methods.png)
+Source: LangChain documentation: !(https://js.langchain.com/v0.1/docs/get_started/introduction)    
