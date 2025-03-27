@@ -1,6 +1,15 @@
 # 7-Day Challenge: Building LLM Applications
 
-This repository contains notes, assignments, and projects for the AI Camp 7-Day LLM challenge lead by Candice You. The challenge can be found here: https://www.aicamp.ai/event/eventdetails/W2025010600
+This repository contains notes, assignments, and projects for the AI Camp 7-Day LLM challenge lead by Candice You. The challenge can be found here: https://www.aicamp.ai/event/eventdetails/W2025010600 
+
+
+## LLM Application: AI Financial Advisor  
+
+For the project component of the course, we present an AI Financial Advisor. It is a RAG system that gives financial information and advice 
+about companies based on information retrieved from SEC filings.  
+
+For details, see `financial-rag-application/financial-rag.ipynb`
+
 
 ## Syllabus
 
